@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawk and Eagle</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1-alpha.9/dist/tf-tflite.min.js"></script> 
+    <!-- <script src="https://storage.googleapis.com/tfweb/api-test/dist/tf-tflite.js"></script> -->
+
+    <script src="index.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          
+          img {
+            display: block;
+            width: 500px;
+            height: 500px;
+            margin-right: 20px;
+            border-radius: 8px;
+          }
+          
+          .credit {
+            margin-top: 6px;
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+          }
+          
+          canvas {
+            border-radius: 8px;
+            position: absolute;
+          }
+          
+          .result-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+          }
+          
+          .trigger {
+            border: 1px dashed #ccc;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #e28843;
+          }
+          
+          .trigger:hover {
+            background-color: #eee;
+          }
+          
+          .hide {
+            display: none;
+          }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+      <h1 >Hawk and Eagle</h1>
+
+      <input type="file" id="imageFileInput" accept="image/*" capture="camera" onchange="imageShow()">
+      <br>
+      <br>
+      <img width="500px" height="500px" class="result-container" id="imageInput" value="Select an image"/>
+
+      <div id="result" class="result-container"></div>
+
+
+    </div>
+
+<!--     <div class="result-container">
+      <button onclick="predictImage()">Predict</button>
+      
+    </div> -->
+</body>
+</html>
